@@ -1,3 +1,5 @@
+
+
 public class Test {
 
     public static void main(String[] args) {
@@ -9,6 +11,7 @@ public class Test {
         // Student student1 = new Student(17); // overloaded parameterized constructor
 
         
+        Student student1 = new Student();
         System.out.println(student1.getName());
         System.out.println(student1.getId());
         System.out.println(student1.getAge());

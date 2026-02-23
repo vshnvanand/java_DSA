@@ -1,9 +1,12 @@
+
+
 public class Test {
     
     public static void main(String[] args) {
-        Cat cat = new Cat();
+        Golden dog = new Golden();
+        System.out.println(dog.getName());
 
-        cat.name = "Bob";
+
     }
 
 }
