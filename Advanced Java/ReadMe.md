@@ -129,4 +129,25 @@ Abstract is a complete structure interface is just a small part
 
 The problem interface solves 
 1. Multiple inheritance
-2. No need to storing things and deidcated structure you can pick things from different different interfaces 
+2. No need to storing things and deidcated structure you can pick things from different different interfaces.
+3. Abstract could have concreate methods but interfaces dont have them 
+
+- Abstract classes mein instance variables hoti hai 
+or unko initize krne k liye constructor bhi chahiye hote hai 
+
+But interfaces mein yeh nahi hoti 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## inner classes
+- Nested class
+-- Member inner class
+-- Static Nested class
+-- Local inner class
+-- Anonymous Inner class
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+## types of static 
+Static variable - There is only one copy of variable shared by all objects.
+static class - 
