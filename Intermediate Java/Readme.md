@@ -79,6 +79,13 @@ Public < Protected < Default < Private - Securities
 
 Subclass means - inherit class / child class the class which uses extends, which inherit other class
 
+
+
+## Why having a class abstract is also manditory if there is even one abstract method
+
+-You are saying the class has a method, But you are not providing its implementation, So the class is incomplete
+
+
 ---------------------------------------------------------------------------------------------
 ## Constructor
 - Its is initailize as an object is created like for every new object a new constructor but static block is initialized when a class is created like every new object same class
@@ -124,3 +131,110 @@ class Student {
         this.name = s.name;
     }
 }
+
+
+
+
+-- Constructor Overloading
+
+class Car {
+    Car() {
+        System.out.println("No data");
+    }
+
+    Car(String model) {
+        System.out.println("Model: " + model);
+    }
+}
+>> Same as method overloading
+
+-- Constructor chaining
+
+class Student {
+    String name;
+    int age;
+
+    Student(String name) {
+        this(name, 18);
+    }
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+>> this() must be first line.
+
+-- Super constructor
+
+class Animal {
+    Animal() {
+        System.out.println("Animal created");
+    }
+}
+
+class Dog extends Animal {
+    Dog() {
+        super();  // calls parent constructor
+        System.out.println("Dog created");
+    }
+}
+
+Can Constructor Be static?
+- No.
+Because constructor initializes object.
+Static belongs to class.
+
+Can Constructor Be private?
+Yes.
+
+Used in:
+Singleton pattern
+Factory methods
+
+Important Interview Points
+✔ Constructor is not inherited
+✔ Constructor cannot be overridden
+✔ Constructor can be overloaded
+✔ If you write parameterized constructor, default is not auto-created
+✔ this() and super() must be first statement
+
+---------------------------------------------------------------------------------------------
+
+## Copy constructor 
+
+- Shallow copy constructor
+- Deep copy constructor 
+
+
+---------------------------------------------------------------------------------------------
+
+# What is an Abstract Method? 
+A method declared but not implemented 
+That means it has no body 
+Its is just like a rought sketch like notind down list of requirements before starting a project like a planning
+
+
+# Why abstract method means abstract class?
+Because without method what is the use of class 
+and what will the object does when it is called
+
+
+- Bhai agar tu abstract k aandar logic likh raha hai tho tu bewakoof hai kyu likh waha raha hai wahi baat gadhe k race mein kutte tho dhoda raha hai kyu? jab uska purpose waha hai he nahi 
+
+- What If Abstract Method Didn’t Exist?
+Without abstract methods:
+You could forget to implement important behavior in subclass.
+Abstract method forces subclass to implement it.
+It enforces a contract.
+
+- Why Not Just Use a Normal Class?
+Then:
+Subclass can override it — but it is optional.
+With abstract:
+Override becomes mandatory. And it is the purpose of the abstract to override it like a check list where you mention what to do, not how to do 
+
+- Why Can’t We Create Object of Abstract Class?
+Because we dont know the behaviour of the object 
+Compiler will say krna kya hai iska hai kya yeh kuch tho batao uss hisab se banaunaga na bhai
