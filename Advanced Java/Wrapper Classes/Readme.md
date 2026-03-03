@@ -14,7 +14,18 @@ Integer is a wrapper class based on the primitive int making it a class object
 Automatically converting a primiative into classes
 Integer b = Integer.valueOf(1); // in reality this is what it is 
 but java automatically does is 
-Integer b = 1;
+Integer b = 1; 
+Here what actually happened is that the Wrapper class created an object of a primitive datatype 
+
+## Why autoBoxing
+
+Wrapper classes are required in Java for the following reasons:
+
+- Java collections (ArrayList, HashMap, etc.) store only objects, not primitives.
+? Wrapper objects allow primitives to be used in object-oriented features like methods, synchronization, and serialization.
+? Objects support null values, while primitives do not.
+- Wrapper classes provide utility methods such as compareTo(), equals(), and toString().
+
 
 ### Autounboxing
 
